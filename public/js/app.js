@@ -19,10 +19,11 @@ const getCharInfo = (char_name) => {
             <h1>${charInfo.charName}</h1>
             <h3>${charInfo.nickname}</h3>
             <img src="${charInfo.image}" class='char_img' alt="">
+            <h5>Status: ${charInfo.status}</h5>
             `;
             }
             loading.textContent = '';
-        })
+        });
 };
 
 form.addEventListener('submit', (e) => {
@@ -30,7 +31,7 @@ form.addEventListener('submit', (e) => {
     const charName = search.value;
     console.log(charName);
     loading.textContent = 'Loading...';
-    char_data.innerHTML = ''
+    char_data.innerHTML = '';
     getCharInfo(charName);
     search.value = '';
 });

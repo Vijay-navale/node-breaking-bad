@@ -56,13 +56,14 @@ app.get('/getbbchar', (req, res) => {
     }
     characterInfoByName(
         req.query.character_name,
-        ({ id, name, image, nickname } = {}) => {
+        ({ id, name, image, nickname, status } = {}) => {
             if(id){
                 res.send({
                     charName: name,
                     charId: id,
                     nickname,
                     image,
+                    status
                 });
 
             }else{

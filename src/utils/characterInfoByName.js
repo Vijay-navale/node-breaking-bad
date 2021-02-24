@@ -15,6 +15,7 @@ const characterInfoByName = (characterName, callback) => {
                     name: response.data[0].name,
                     image: response.data[0].img,
                     nickname: response.data[0].nickname,
+                    status: response.data[0].status,
                 });
             }
         })
