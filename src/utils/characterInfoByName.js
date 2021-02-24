@@ -21,6 +21,7 @@ const characterInfoByName = (characterName, callback) => {
         .catch(function (e) {
             //handle error
             console.log(e.message);
+            console.log('error');
         });
 };
 
