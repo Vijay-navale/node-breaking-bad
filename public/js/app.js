@@ -4,7 +4,7 @@ const loading = document.getElementById('loading');
 const char_data = document.getElementById('char_data');
 
 const getCharInfo = (char_name) => {
-    fetch(`http://localhost:3000/getbbchar?character_nam=${char_name}`)
+    fetch(`/getbbchar?character_name=${char_name}`)
         .then((data) => {
             return data.json();
         })

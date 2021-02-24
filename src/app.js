@@ -9,6 +9,7 @@ const hbs = require('hbs');
 
 //creating express application
 const app = express();
+const port = process.env.PORT || 3000
 
 //define paths for express config
 const publicDirPath = path.join(__dirname, '../public'); //by default it will detect index.html file
@@ -106,6 +107,6 @@ app.get('*', (req, res) => {
 });
 
 //port is listening at 3000
-app.listen(3000, () => {
-    console.log('Port is up and running');
+app.listen(port, () => {
+    console.log('Port is up and running' + port);
 });
